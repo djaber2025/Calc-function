@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+char *decToBin(int n) {
+    char temp[32];
+    int i = 0;
+
+    if (n == 0) {
+        char *res = (char *)malloc(2); 
+        if (!res) return NULL;
+        res[0] = '0';
+        res[1] = '\0';
+        return res;
+    }
+
+    while (n > 0) {
+        temp[i++] = (n % 2) + '0';
+        n /= 2;
+    }
+
+    char *bin = (char *)malloc(i + 1); 
+    if (!bin) return NULL;
+
+    int j = 0;
+    while (i > 0) {
+        bin[j++] = temp[--i];
+    }
+    bin[j] = '\0';
+    return bin;
+}
+int main(){
+int N ;
+do{
+printf("Enter a number decimal N :");
+scanf("%d",&N);
+}while(N<0) ;
+printf("\nThe value bin is %s",decToBin(N));
+    return 0;
+}
