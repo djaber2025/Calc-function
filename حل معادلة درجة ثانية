@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+/*exercice 5*/
+/*؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟حل معادلة من الدرجة الثانية ؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟*/
+float a,b,c,D,x1,x2,x ;
+printf("We have equation to solves ax^2+bx+c \nEnter The Values of a , b and c please : ");
+scanf("%f %f %f",&a,&b,&c);
+if (a==0){
+    if(b==0){
+        if(c==0){
+                printf("All number in R is solution !\n");
+}       else {
+                printf("No solution in R !!!!\n");
+} } 
+    else {
+        printf("the solution is %.2f\n",-c/b);
+}
+}
+else {
+    D=b*b-4*a*c ;
+    if( D==0){
+        printf("The solution is :%.2f\n",-b/(2*a));
+    }
+    else if(D>0){
+        x1=((-b)-sqrt(D))/(2*a) ;  
+        x2=((-b)+sqrt(D))/(2*a) ; 
+        printf("The two solutions are :\n%.2f\n%.2f\n",x1,x2);
+    }
+    else if(D<0){
+        x1=((-b)-sqrt(-D))/(2*a) ;  
+        x2=((-b)+sqrt(-D))/(2*a) ; 
+        printf("The two solutions complexix are :\n%.2f\n%.2f\n",x1,x2);    
+    }
+}
+    return 0;
+}
