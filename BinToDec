@@ -1,0 +1,28 @@
+#include <string.h>
+#include <stdio.h>
+
+   long long int binToDec(const char *bin) {
+    int dec = 0;
+    int i = 0;
+
+    while (bin[i] == '0' || bin[i] == '1') {
+        dec = dec * 2 + (bin[i] - '0');
+        i++;
+    }
+    if (bin[i] != '0' && bin[i] != '1') {
+        printf("Error !!!\n");
+    }
+
+    return dec;
+}
+int main(){
+    const char *s ;
+    
+    printf("Enter a binary number : ");
+    scanf("%s",&*s);
+
+
+    printf("The dec is : %lld",binToDec(s));
+    
+    return 0 ;
+}
