@@ -1,7 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(){
-    const Pi =3.14159265358979323846264338327950288419716939937510 ;
     double Ln (float x){
     int i ;
     double S=0 ;
@@ -88,7 +87,6 @@ int main(){
     }
     else {
          printf("Invailed !!!\n");
-         goto debut ;
     }
     T=T/10 ;
     }
@@ -98,25 +96,11 @@ int main(){
         K=K/10 ;
     return B ;
     }
-    void dec_to_bin(int n) {
-    if (n == 0) {
-        printf("0");
-        return;
-    }
-    int bin[32];  
-    int i = 0;
-    while (n > 0) {
-        bin[i] = n % 2;  
-        n = n / 2;
-        i++;
-    }
-    for (int j = i - 1; j >= 0; j--) {
-        printf("%d", bin[j]);
-    }
-    }
-
-
-
-getch();
+int main (){
+    double  Pi =3.14159265358979323846264338327950288419716939937510 ;
+    int N; 
+    printf("Enter a number N : ");
+    scanf("%d",&N);
+    screen(N) ;
     return 0;
 }
